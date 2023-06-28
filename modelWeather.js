@@ -1,6 +1,7 @@
 'use strict';
 const dotenv = require('dotenv');
 const axios = require('axios');
+const logger = require('./winston');
 dotenv.config();
 const {
     API_KEY,
@@ -23,15 +24,18 @@ async function getDefaultLocation(res, req, next) {
         });
 
         const weatherData = response.data;
-        console.log(weatherData);
         return res.send({ 'code': 200, message: 'success', results: weatherData });
         // return res.json(weatherDataa);
     } catch (error) {
         console.error(error);
+        logger.error(new Error(error));
         return res.send({ 'code': 500, message: 'error', results: null });
         //    return res.status(500).json({ error: 'Something went wrong' });
     }
 }
+//tự động lấy 20ph rồi put vào database
+//ghi log
+//tạo hàm lấy tọa độ trong database rồi put vào
 module.exports = {
     getDefaultLocation
 }

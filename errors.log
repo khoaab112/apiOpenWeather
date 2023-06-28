@@ -1,0 +1,6 @@
+[2023-06-28 16:55:03] [[31merror[39m] Error: ReferenceError: weatherDatas is not defined
+    at Object.getDefaultLocation (D:\apiOpenWeather\modelWeather.js:32:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[2023-06-28 16:55:15] [[31merror[39m] Error: ReferenceError: weatherDatas is not defined
+    at Object.getDefaultLocation (D:\apiOpenWeather\modelWeather.js:32:22)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
