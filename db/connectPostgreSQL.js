@@ -26,10 +26,9 @@ client.connect((err, client, release) => {
     }
     console.log('Kết nối thành công!');
 });
-// process.on('exit', () => {
-//     pool.end();
-// })
-// export default {
-//     client,
-//     process
-// };
+client.on('exit', () => {
+    pool.end();
+})
+export default {
+    client,
+};
