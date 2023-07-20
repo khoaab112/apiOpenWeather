@@ -8,9 +8,11 @@ const {
     DEFAULT_LOCATION_LATITYDE,
     DEFAULT_LOCATION_LONGITUDE
 } = process.env;
+
+
 const lang = 'vi'
 const units = 'metric'
-//lấy thông tin hn
+    //lấy thông tin hn
 async function getDefaultLocation(res, req, next) {
     try {
         const response = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
